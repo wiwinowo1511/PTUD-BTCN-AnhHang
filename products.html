@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Danh sách sản phẩm chăm sóc da - giao diện minh họa Hasaki.">
+  <title>Danh sách sản phẩm chăm sóc da | Hasaki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-strip">
+    <span>Ưu đãi làm đẹp mỗi ngày · Giao hàng toàn quốc</span>
+    <a href="tel:18006324">Hotline: 1800 6324 (miễn phí)</a>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="products.html" aria-label="Hasaki - trang chủ">
+      <img src="logo Hasaki.jpg" alt="Hasaki - Sản phẩm chính hãng">
+    </a>
+    <form class="search" role="search" action="products.html" method="get">
+      <label class="sr-only" for="search-input">Tìm kiếm sản phẩm</label>
+      <input id="search-input" type="search" name="q" placeholder="Tìm mỹ phẩm, thương hiệu..." />
+      <button type="submit">Tìm kiếm</button>
+    </form>
+    <nav class="header-actions" aria-label="Tài khoản và giỏ hàng">
+      <a class="header-link" href="#store-info">Hệ thống cửa hàng</a>
+      <a class="header-link" href="#contact">Hỗ trợ</a>
+      <a class="header-action" href="#login">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+        <span>Đăng nhập</span>
+      </a>
+      <a class="header-action header-action--cart" href="#cart" aria-label="Giỏ hàng, 0 sản phẩm">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2.5l2.2 11h10.6l2-8H6.4"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></svg>
+        <span>Giỏ hàng</span>
+        <b class="cart-count" aria-hidden="true">0</b>
+      </a>
+    </nav>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Đường dẫn">
+  <ol>
+    <li><a href="products.html">Trang chủ</a></li>
+    <li><a href="products.html">Tất cả sản phẩm</a></li>
+    <li><span aria-current="page">Chăm sóc da</span></li>
+  </ol>
+</nav>
+
+  <main class="page-layout">
+    <div class="main-column">
+
+      <section class="content-card list-head" aria-labelledby="list-title">
+        <p class="eyebrow">CHĂM SÓC DA</p>
+        <h1 id="list-title">Danh sách sản phẩm</h1>
+        <p class="muted">Dữ liệu sản phẩm, giá và đánh giá bên dưới chỉ là nội dung minh họa cho bài tập.</p>
+
+        <!-- Thanh công cụ: tìm kiếm + sắp xếp (gửi bằng form GET, không dùng JavaScript) -->
+        <form class="list-toolbar" action="products.html" method="get" role="search" aria-label="Tìm kiếm và sắp xếp sản phẩm">
+          <div class="toolbar-field toolbar-field--search">
+            <label for="list-search">Tìm trong danh sách</label>
+            <input id="list-search" type="search" name="q" placeholder="Nhập tên sản phẩm...">
+          </div>
+          <div class="toolbar-field">
+            <label for="list-sort">Sắp xếp theo</label>
+            <select id="list-sort" name="sort">
+              <option value="featured" selected>Nổi bật</option>
+              <option value="price-asc">Giá: thấp đến cao</option>
+              <option value="price-desc">Giá: cao đến thấp</option>
+              <option value="rating">Đánh giá cao nhất</option>
+              <option value="newest">Mới nhất</option>
+            </select>
+          </div>
+          <button class="btn btn--buy toolbar-submit" type="submit">Áp dụng</button>
+        </form>
+        <p class="result-count" role="status">Hiển thị <strong>8</strong> sản phẩm</p>
+      </section>
+
+      <section class="product-grid" aria-label="Danh sách sản phẩm">
+
+        <article class="product-item">
+          <a class="product-item-media" href="products-detail.html">
+            <span class="product-badges"><span class="badge sale">-20%</span></span>
+            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Kem dưỡng ẩm phục hồi da" width="500" height="575" loading="lazy">
+          </a>
+          <div class="product-item-body">
+            <span class="recommend-tag">Dưỡng ẩm</span>
+            <h2><a href="products-detail.html">Kem dưỡng ẩm phục hồi da </a></h2>
+            <div class="stars">★★★★★ <span class="muted">(126)</span></div>
+            <p class="product-item-price"><strong class="recommend-price">249.000₫</strong> <del>312.000₫</del></p>
+            <a class="btn btn--cart" href="product-detail.html" aria-label="Xem chi tiết Kem dưỡng ẩm phục hồi da">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <a class="product-item-media" href="products-detail.html">
+            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Gel dưỡng ẩm dịu nhẹ" width="500" height="575" loading="lazy">
+          </a>
+          <div class="product-item-body">
+            <span class="recommend-tag">Dưỡng ẩm</span>
+            <h2><a href="products-detail.html">Gel dưỡng ẩm dịu nhẹ</a></h2>
+            <div class="stars">★★★★★ <span class="muted">(89)</span></div>
+            <p class="product-item-price"><strong class="recommend-price">189.000₫</strong></p>
+            <a class="btn btn--cart" href="products-detail.html" aria-label="Xem chi tiết Gel dưỡng ẩm dịu nhẹ">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <a class="product-item-media" href="products-detail.html">
+            <span class="product-badges"><span class="badge official">Chính hãng</span></span>
+            <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Serum cấp ẩm" width="500" height="575" loading="lazy">
+          </a>
+          <div class="product-item-body">
+            <span class="recommend-tag">Serum</span>
+            <h2><a href="products-detail.html">Serum cấp ẩm</a></h2>
+            <div class="stars">★★★★☆ <span class="muted">(54)</span></div>
+            <p class="product-item-price"><strong class="recommend-price">219.000₫</strong></p>
+            <a class="btn btn--cart" href="products-detail.html" aria-label="Xem chi tiết Serum cấp ẩm">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <a class="product-item-media" href="products-detail.html">
+            <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Sữa rửa mặt dịu nhẹ" width="500" height="575" loading="lazy">
+          </a>
+          <div class="product-item-body">
+            <span class="recommend-tag">Làm sạch</span>
+            <h2><a href="products-detail.html">Sữa rửa mặt dịu nhẹ</a></h2>
+            <div class="stars">★★★★★ <span class="muted">(102)</span></div>
+            <p class="product-item-price"><strong class="recommend-price">159.000₫</strong></p>
+            <a class="btn btn--cart" href="products-detail.html" aria-label="Xem chi tiết Sữa rửa mặt dịu nhẹ">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <a class="product-item-media" href="products-detail.html">
+            <span class="product-badges"><span class="badge sale">-15%</span></span>
+            <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Tinh chất phục hồi" width="500" height="575" loading="lazy">
+          </a>
+          <div class="product-item-body">
+            <span class="recommend-tag">Serum</span>
+            <h2><a href="products-detail.html">Tinh chất phục hồi da</a></h2>
+            <div class="stars">★★★★☆ <span class="muted">(37)</span></div>
+            <p class="product-item-price"><strong class="recommend-price">289.000₫</strong> <del>340.000₫</del></p>
+            <a class="btn btn--cart" href="products-detail.html" aria-label="Xem chi tiết Tinh chất phục hồi da">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <a class="product-item-media" href="products-detail.html">
+            <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Nước cân bằng da" width="500" height="575" loading="lazy">
+          </a>
+          <div class="product-item-body">
+            <span class="recommend-tag">Làm sạch</span>
+            <h2><a href="products-detail.html">Nước cân bằng da</a></h2>
+            <div class="stars">★★★★☆ <span class="muted">(61)</span></div>
+            <p class="product-item-price"><strong class="recommend-price">175.000₫</strong></p>
+            <a class="btn btn--cart" href="products-detail.html" aria-label="Xem chi tiết Nước cân bằng da">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <a class="product-item-media" href="products-detail.html">
+            <span class="product-badges"><span class="badge official">Chính hãng</span></span>
+            <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Kem chống nắng dịu nhẹ" width="500" height="575" loading="lazy">
+          </a>
+          <div class="product-item-body">
+            <span class="recommend-tag">Chống nắng</span>
+            <h2><a href="products-detail.html">Kem chống nắng dịu nhẹ</a></h2>
+            <div class="stars">★★★★★ <span class="muted">(148)</span></div>
+            <p class="product-item-price"><strong class="recommend-price">229.000₫</strong></p>
+            <a class="btn btn--cart" href="products-detail.html" aria-label="Xem chi tiết Kem chống nắng dịu nhẹ">Xem chi tiết</a>
+          </div>
+        </article>
+
+        <article class="product-item">
+          <a class="product-item-media" href="products-detail.html">
+            <img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&amp;fit=crop&amp;w=500&amp;q=80" alt="Mặt nạ cấp ẩm" width="500" height="575" loading="lazy">
+          </a>
+          <div class="product-item-body">
+            <span class="recommend-tag">Mặt nạ</span>
+            <h2><a href="products-detail.html">Mặt nạ cấp ẩm</a></h2>
+            <div class="stars">★★★★☆ <span class="muted">(45)</span></div>
+            <p class="product-item-price"><strong class="recommend-price">49.000₫</strong></p>
+            <a class="btn btn--cart" href="products-detail.html" aria-label="Xem chi tiết Mặt nạ cấp ẩm">Xem chi tiết</a>
+          </div>
+        </article>
+      </section>
+
+      <nav class="pagination" aria-label="Phân trang">
+        <a class="page-link" href="#" aria-label="Trang trước">‹</a>
+        <a class="page-link current" href="#" aria-current="page">1</a>
+        <a class="page-link" href="#">2</a>
+        <a class="page-link" href="#">3</a>
+        <a class="page-link" href="#" aria-label="Trang sau">›</a>
+      </nav>
+    </div>
+
+    
+    <aside class="recommendations" aria-labelledby="filter-title" id="store-info">
+      <div class="recommend-header"><h2 id="filter-title">Danh mục</h2><span>Lọc nhanh theo nhóm sản phẩm</span></div>
+      <ul class="category-list">
+        <li><a href="#">Dưỡng ẩm <span class="muted">(2)</span></a></li>
+        <li><a href="#">Serum <span class="muted">(2)</span></a></li>
+        <li><a href="#">Làm sạch <span class="muted">(2)</span></a></li>
+        <li><a href="#">Chống nắng <span class="muted">(1)</span></a></li>
+        <li><a href="#">Mặt nạ <span class="muted">(1)</span></a></li>
+      </ul>
+      <div class="help-card"><strong>Cần hỗ trợ chọn sản phẩm?</strong><p>Đọc kỹ thông tin hoặc liên hệ tư vấn viên trước khi mua.</p><a href="products-detail.html#qa">Xem câu hỏi thường gặp →</a></div>
+    </aside>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-inner">
+      <section class="footer-col footer-about" aria-labelledby="ft-contact">
+        <h2 id="ft-contact">Thông tin liên hệ</h2>
+        <address>
+          <p><span aria-hidden="true">📞</span> Hotline: <a href="tel:18006324">1800 6324</a> (miễn phí)</p>
+          <p><span aria-hidden="true">✉️</span> Email: <a href="mailto:hotro@hasaki.vn">hotro@hasaki.vn</a></p>
+          <p><span aria-hidden="true">📍</span> Trụ sở: [Địa chỉ công ty - cần cập nhật], TP. Hồ Chí Minh</p>
+          <p><span aria-hidden="true">🕘</span> Giờ làm việc: 8:00 - 21:30 mỗi ngày</p>
+        </address>
+        <div class="footer-logo"><img src="logo hasaki.jpg" alt="Hasaki"></div>
+      </section>
+
+      <nav class="footer-col" aria-labelledby="ft-policy">
+        <h2 id="ft-policy">Chính sách</h2>
+        <ul><li><a href="#">Chính sách đổi trả &amp; hoàn tiền</a></li><li><a href="#">Chính sách bảo mật thông tin</a></li><li><a href="#">Chính sách vận chuyển</a></li><li><a href="#">Chính sách thanh toán</a></li><li><a href="#">Chính sách kiểm hàng</a></li><li><a href="#">Điều khoản sử dụng</a></li></ul>
+      </nav>
+
+      <nav class="footer-col" aria-labelledby="ft-support">
+        <h2 id="ft-support">Hỗ trợ khách hàng</h2>
+        <ul><li><a href="#">Hướng dẫn mua hàng</a></li><li><a href="#">Tra cứu đơn hàng</a></li><li><a href="#">Câu hỏi thường gặp</a></li><li><a href="#">Chương trình thành viên</a></li><li><a href="#">Tuyển dụng</a></li><li><a href="#">Về Hasaki</a></li></ul>
+      </nav>
+
+      <section class="footer-col" aria-labelledby="ft-cert">
+        <h2 id="ft-cert">Chứng nhận &amp; thanh toán</h2>
+        <div class="cert-row">
+          <a class="cert-badge" href="#" aria-label="Đã thông báo Bộ Công Thương (hình minh họa)">
+            <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f5fb0"/><path d="M12 20.5l5.5 5.5L28.5 14.5" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>ĐÃ THÔNG BÁO</strong><small>Bộ Công Thương</small></span>
+          </a>
+          <div class="cert-badge cert-badge--green">
+            <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><path d="M20 3l14 5v10c0 9-6 16-14 19C12 34 6 27 6 18V8z" fill="#2f6f55"/><path d="M13 20l5 5 9-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span><strong>CHÍNH HÃNG</strong><small>Cam kết 100%</small></span>
+          </div>
+        </div>
+        <h3 class="footer-label">Phương thức thanh toán</h3>
+        <ul class="pay-list" aria-label="Phương thức thanh toán">
+          <li>COD</li><li>Visa</li><li>Mastercard</li><li>MoMo</li><li>ZaloPay</li><li>Chuyển khoản</li>
+        </ul>
+        <h3 class="footer-label">Kết nối với chúng tôi</h3>
+        <ul class="social-list">
+          <li><a href="#" aria-label="Facebook">f</a></li>
+          <li><a href="#" aria-label="YouTube">▶</a></li>
+          <li><a href="#" aria-label="TikTok">♪</a></li>
+          <li><a href="#" aria-label="Zalo">Z</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Hasaki. Giao diện học tập HTML5 &amp; CSS3 · Không liên kết hệ thống bán hàng thật.</p>
+      <p>Tên doanh nghiệp, mã số thuế, địa chỉ, số hotline và huy hiệu Bộ Công Thương là nội dung giữ chỗ - cần thay bằng thông tin chính thức trước khi công bố.</p>
+    </div>
+  </footer>
+</body>
+</html>
