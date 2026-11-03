@@ -15,7 +15,7 @@ Bài tập tiếp tục phát triển website trang chi tiết sản phẩm Hasa
 - Dùng **Flexbox** hoặc **CSS Grid** để bố trí giao diện.
 
 ## 4. Hướng dẫn chạy website
-Mở file `index.html` bằng trình duyệt web.
+Mở file `products.html` bằng trình duyệt web.
 
 ## 5. Những thay đổi đã thực hiện
 - Tiếp tục hoàn thiện giao diện trang chi tiết sản phẩm từ Buổi 1.
