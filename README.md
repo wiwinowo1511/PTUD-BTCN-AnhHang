@@ -8,7 +8,7 @@ Bài tập tiếp tục phát triển website thương mại điện tử Hasaki
 
 - **Website tham khảo:** [Hasaki.vn](https://hasaki.vn/)
 - **Khu vực cải tiến:** Trang danh sách và trang chi tiết sản phẩm, tập trung vào bố cục thẻ sản phẩm, cụm nút mua hàng và cách trình bày thông tin.
-- **Website thực hành:**: [Website cá nhân]([url](https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/))
+- **Website thực hành:**: [Website cá nhân]([https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/])
 ## 3. Kỹ thuật HTML5/CSS3 đã thực hành
 
 - Sử dụng các thẻ HTML5 ngữ nghĩa để tổ chức nội dung trang web.
