@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* CSS riêng cho trang chủ - dùng cùng styles.css (biến màu, header, footer, thẻ sản phẩm) */
+/* ===== TRANG CHỦ (index.html) ===== */
+.home-main { max-width: 1240px; margin: 18px auto 40px; padding: 0 20px; display: grid; gap: 28px; }
+
+/* Thanh danh mục ngang */
+.home-nav { background: #fff; border-bottom: 1px solid var(--border); }
+.home-nav ul { display: flex; gap: 4px; max-width: 1240px; margin: 0 auto; padding: 0 20px; list-style: none; overflow-x: auto; }
+.home-nav a { display: block; padding: 12px 14px; color: var(--text); font-size: 13px; font-weight: 700; white-space: nowrap; border-bottom: 3px solid transparent; }
+.home-nav a:hover { color: var(--brand-green-dark); border-bottom-color: var(--brand-green); text-decoration: none; }
+
+/* Banner chính */
+.hero { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 16px; }
+.hero-main {
+  display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 10px;
+  min-height: 340px; padding: 40px;
+  color: #fff; border-radius: var(--radius); box-shadow: var(--shadow);
+  background: linear-gradient(120deg, var(--brand-green-dark) 0%, var(--brand-green) 60%, #4e9a77 100%);
+}
+.hero-main .eyebrow { color: #cfeadb; }
+.hero-main h1 { margin: 0; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.2; }
+.hero-main p { max-width: 460px; margin: 0 0 8px; font-size: 15px; color: rgba(255,255,255,.9); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.hero-actions .btn { min-height: 46px; padding-right: 22px; padding-left: 22px; }
+.btn--ghost { color: #fff; background: transparent; border-color: rgba(255,255,255,.7); }
+.btn--ghost:hover { background: rgba(255,255,255,.14); }
+.hero-side { display: grid; gap: 16px; }
+.promo-tile {
+  display: flex; flex-direction: column; justify-content: center; gap: 4px; padding: 22px 24px;
+  border-radius: var(--radius); box-shadow: var(--shadow); color: var(--text);
+}
+.promo-tile:hover { text-decoration: none; transform: translateY(-2px); }
+.promo-tile { transition: transform .18s ease; }
+.promo-tile strong { font-size: 18px; line-height: 1.3; }
+.promo-tile span { font-size: 13px; color: var(--muted); }
+.promo-tile--gold { background: #fff6e0; border: 1px solid #f0d9a0; }
+.promo-tile--red { background: #fff0f0; border: 1px solid #f3c6c8; }
+.promo-tile--red strong { color: var(--brand-red); }
+
+/* Dải cam kết */
+.trust-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; padding: 16px; }
+.trust-item { display: flex; align-items: center; gap: 10px; }
+.trust-item p { display: grid; margin: 0; font-size: 13px; line-height: 1.35; }
+.trust-item small { color: var(--muted); font-size: 11px; }
+
+/* Danh mục nổi bật */
+.category-tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.category-tile {
+  display: grid; justify-items: center; gap: 8px; padding: 18px 8px;
+  color: var(--text); font-size: 13px; font-weight: 700; text-align: center;
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
+  transition: border-color .18s ease, transform .18s ease;
+}
+.category-tile:hover { border-color: var(--brand-green); transform: translateY(-2px); text-decoration: none; }
+.category-tile .tile-icon { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; background: #edf5ef; font-size: 26px; }
+
+/* Tiêu đề khu vực + lưới 4 sản phẩm */
+.home-section .section-heading { margin-bottom: 14px; }
+.section-link { flex: 0 0 auto; font-size: 13px; font-weight: 700; }
+.product-grid--home { grid-template-columns: repeat(4, 1fr); }
+
+/* Thương hiệu */
+.brand-row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.brand-chip {
+  display: grid; place-items: center; min-height: 64px; padding: 10px;
+  color: var(--brand-green-dark); font-weight: 800; letter-spacing: .02em; font-size: 14px;
+  background: #fff; border: 1px solid var(--border); border-radius: 10px;
+}
+
+/* Khối kêu gọi */
+.cta-band {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px 24px;
+  padding: 26px 30px; color: #fff; border-radius: var(--radius);
+  background: linear-gradient(120deg, var(--brand-red-dark), var(--brand-red));
+}
+.cta-band h2 { margin: 0 0 4px; font-size: 22px; }
+.cta-band p { margin: 0; font-size: 14px; opacity: .92; }
+.cta-band .btn { color: var(--brand-red-dark); background: #fff; border-color: #fff; }
+.cta-band .btn:hover { background: #fff0f0; }
+
+@media (max-width: 1000px) {
+  .category-tiles, .brand-row { grid-template-columns: repeat(3, 1fr); }
+  .trust-strip { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 760px) {
+  .home-main { padding: 0 12px; gap: 20px; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-main { min-height: 260px; padding: 26px 20px; }
+  .hero-side { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .promo-tile { padding: 14px; }
+  .promo-tile strong { font-size: 14px; }
+  .product-grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .cta-band { padding: 20px 18px; }
+}
+@media (max-width: 560px) {
+  .trust-strip { grid-template-columns: 1fr; }
+  .hero-side { grid-template-columns: 1fr; }
+}
