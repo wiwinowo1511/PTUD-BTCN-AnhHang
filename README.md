@@ -1,42 +1,60 @@
-# Bài tập cá nhân Buổi 2 – Phát triển ứng dụng TMĐT
+# JavaScript Labs
 
-## 1. Giới thiệu
+Website tổng hợp các bài thực hành JavaScript trong học phần Phát triển ứng dụng Thương mại điện tử.
 
-Bài tập tiếp tục phát triển website thương mại điện tử Hasaki từ Buổi 1, tập trung thực hành HTML5 và CSS3 nhằm hoàn thiện bố cục, cách trình bày và khả năng tương tác của giao diện.
+## Thông tin sinh viên
 
-## 2. Website tham khảo và khu vực cải tiến
+- **Họ và tên:** Nguyễn Thị Ánh Hằng
+- **MSSV:** 31241027237
+- **Lớp học phần:** Phát triển ứng dụng Thương mại điện tử ST4
+- **GitHub:** [wiwinowo1511](https://github.com/wiwinowo1511)
 
-- **Website tham khảo:** [Hasaki.vn](https://hasaki.vn/)
-- **Khu vực cải tiến:** Trang danh sách và trang chi tiết sản phẩm, tập trung vào bố cục thẻ sản phẩm, cụm nút mua hàng và cách trình bày thông tin.
-- **Website thực hành:**: https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/
-## 3. Kỹ thuật HTML5/CSS3 đã thực hành
+## Mục tiêu
 
-- Sử dụng các thẻ HTML5 ngữ nghĩa để tổ chức nội dung trang web.
-- Áp dụng CSS Selector để lựa chọn và định dạng các thành phần.
-- Sử dụng Box Model (margin, padding, border) để điều chỉnh kích thước và khoảng cách.
-- Sử dụng Flexbox để sắp xếp, căn chỉnh các phần tử trong giao diện.
-- Sử dụng CSS Grid để bố trí danh sách sản phẩm theo dạng lưới.
-- Áp dụng các thuộc tính hover và focus để tăng khả năng tương tác.
-- Sử dụng Media Queries để điều chỉnh giao diện trên các kích thước màn hình khác nhau.
+Ba bài Lab giúp vận dụng JavaScript từ nền tảng ngôn ngữ đến thao tác giao diện web. Qua các walkthrough, sinh viên thực hành viết và liên kết mã JavaScript với HTML, truy xuất và cập nhật DOM, xử lý sự kiện, sử dụng jQuery, tạo hiệu ứng và gửi yêu cầu AJAX.
 
-## 4. Hướng dẫn chạy website
+## Cấu trúc thư mục
 
-- Truy cập website thông qua đường dẫn GitHub Pages ở mục 2.
-- Hoặc tải mã nguồn về máy, mở file `products.html` bằng trình duyệt web.
-- Chọn "Chăm sóc da" ở trang chủ để xem trang Sản phẩm đã thực hành ở buổi 2
-  
-## 5. Những thay đổi đã thực hiện
+```text
+JavaScript-Labs/
+├── index.html                 # Trang chủ, thông tin và các liên kết walkthrough
+├── README.md                  # Tài liệu giới thiệu dự án
+├── css/                       # CSS của trang chủ
+├── js/                        # JavaScript của trang chủ
+├── Lab 08/
+│   ├── lab08-walkthrough*.html
+│   ├── js/                    # Mã JavaScript cho các walkthrough
+│   ├── css/                   # Giao diện và chủ đề
+│   ├── images/, flags/        # Hình ảnh và cờ dùng trong bài
+│   └── Lab08.pdf              # Đề bài/tài liệu Lab 08
+├── Lab 09/
+│   ├── lab09-walkthrough*.html
+│   ├── js/                    # Mã JavaScript cho các walkthrough
+│   ├── css/, images/, flags/  # Tài nguyên giao diện
+│   └── Lab09.pdf              # Đề bài/tài liệu Lab 09
+└── Lab 10/
+    ├── lab10-walkthrough*.html
+    ├── js/                    # Mã jQuery cho các walkthrough
+    ├── css/, images/          # Tài nguyên giao diện
+    └── Lab10.pdf              # Đề bài/tài liệu Lab 10
+```
 
-- Hoàn thiện bố cục thẻ sản phẩm, điều chỉnh khoảng cách giữa các thành phần.
-- Sử dụng Flexbox để sắp xếp nội dung bên trong thẻ sản phẩm.
-- Điều chỉnh `gap` và `padding` để nội dung không bị sát viền.
-- Sử dụng CSS Grid để bố trí danh sách sản phẩm thành các cột.
-- Điều chỉnh giao diện và hiệu ứng tương tác cho các nút bấm.
-- Kiểm tra và điều chỉnh hiển thị trên các kích thước màn hình khác nhau.
+## Nội dung từng Lab
 
-## 6. Công cụ AI và kiểm tra kết quả
+- **Lab 08 – JavaScript 1: Language Foundations:** Làm quen cú pháp JavaScript, cách nhúng JavaScript vào HTML, hàm và sự kiện; thực hành các kiến thức nền tảng của ngôn ngữ.
+- **Lab 09 – JavaScript 2: DOM and Events:** Truy xuất và thay đổi các phần tử DOM, đăng ký bộ xử lý sự kiện và tạo tương tác cho trang web.
+- **Lab 10 – JavaScript 3: jQuery:** Dùng jQuery để chọn và thao tác phần tử DOM, xử lý sự kiện, tạo hiệu ứng và thực hiện yêu cầu bất đồng bộ (AJAX).
 
-- **Công cụ AI sử dụng:** ChatGPT và Claude để tham khảo ý tưởng, giải thích kiến thức HTML5/CSS3 và hỗ trợ tìm nguyên nhân, đề xuất cách khắc phục lỗi.
-- Các đoạn mã do AI đề xuất đều được xem xét, kiểm tra và điều chỉnh trước khi áp dụng vào website.
-- Tự kiểm tra kết quả bằng cách mở website trên trình duyệt, sử dụng DevTools để kiểm tra giao diện ở nhiều kích thước màn hình và thử các trạng thái hover/focus.
-- Kiểm tra lại mã HTML, CSS và khả năng hiển thị của các thành phần sau khi chỉnh sửa.
+## GitHub Pages
+
+Link: [https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/JavaScript-Labs/](https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/JavaScript-Labs/)
+
+Đường dẫn này hoạt động khi GitHub Pages đã được bật cho repository `PTUD-BTCN-AnhHang` và thư mục `JavaScript-Labs` được giữ trong nhánh/thư mục xuất bản.
+
+## Hướng dẫn truy cập bài thực hành
+
+1. Mở trang GitHub Pages ở trên. Khi chạy trên máy, mở file `index.html` trong thư mục `JavaScript-Labs` bằng trình duyệt.
+2. Tìm phần **Các bài thực hành** trên trang chủ.
+3. Chọn **Walkthrough** trong thẻ Lab 08, Lab 09 hoặc Lab 10 để mở bài tương ứng.
+
+Các liên kết trên trang chủ trỏ đến những trang walkthrough HTML hiện có trong từng thư mục Lab.
