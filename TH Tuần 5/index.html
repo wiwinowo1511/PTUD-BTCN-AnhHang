@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tóm tắt nội dung thực hành tuần 5 về thiết kế giao diện responsive với CSS.">
+    <title>Thực hành tuần 5 | Thiết kế responsive</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #172033;
+            background: #f3f6fb;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            line-height: 1.65;
+        }
+
+        header {
+            padding: 3.5rem 1.25rem 3rem;
+            color: white;
+            text-align: center;
+            background: linear-gradient(135deg, #173b75, #2872bd);
+        }
+
+        header p { margin: 0.5rem 0 0; color: #dceaff; }
+        h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); }
+
+        main {
+            width: min(900px, calc(100% - 2rem));
+            margin: 2rem auto;
+        }
+
+        section, .lesson-link {
+            padding: 1.5rem;
+            border: 1px solid #e1e8f2;
+            border-radius: 14px;
+            background: white;
+            box-shadow: 0 8px 24px rgb(29 55 90 / 6%);
+        }
+
+        h2 { margin-top: 0; color: #173b75; }
+        ul { padding-left: 1.25rem; }
+        li + li { margin-top: 0.45rem; }
+
+        .lesson-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1.25rem;
+        }
+
+        .lesson-link p { margin: 0.25rem 0 0; color: #536174; }
+
+        .button {
+            flex: 0 0 auto;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            color: white;
+            background: #1d5fa8;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .button:hover, .button:focus-visible { background: #12477f; }
+
+        footer {
+            padding: 1rem;
+            color: #66758a;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            header { padding: 2.5rem 1rem; }
+            .lesson-link { align-items: stretch; flex-direction: column; }
+            .button { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Thực hành tuần 5</h1>
+        <p>Nguyễn Thị Ánh Hằng - 31241027237</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="lesson-title">
+            <h2 id="lesson-title">Nội dung học hôm nay</h2>
+            <p>
+                Bài thực hành giới thiệu cách dùng CSS để tạo bố cục responsive:
+                sắp xếp các vùng nội dung, thay đổi kích thước theo màn hình và
+                điều chỉnh nội dung khi xem trên thiết bị nhỏ hoặc khi in.
+            </p>
+            <ul>
+                <li>Dùng <code>float</code> và độ rộng phần trăm để chia cột nội dung.</li>
+                <li>Dùng media query để thay đổi bố cục theo chiều rộng màn hình.</li>
+                <li>Ẩn một vùng nội dung ở màn hình nhỏ và tùy chỉnh giao diện in.</li>
+                <li>Dùng phần tử <code>&lt;picture&gt;</code> cùng <code>&lt;source&gt;</code> để chọn hình ảnh phù hợp với màn hình.</li>
+            </ul>
+        </section>
+
+        <div class="lesson-link">
+            <div>
+                <strong>Bài 1: Tạo giao diện responsive</strong>
+                <p>Mở trang thực hành để xem trực tiếp ví dụ đã học.</p>
+            </div>
+            <a class="button" href="./Bai1.html">Xem bài 1 <span aria-hidden="true">→</span></a>
+        </div>
+    </main>
+
+</body>
+</html>
