@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chi tiết sản phẩm - Thạch Anh Xinh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/xzoom/1.0.15/xzoom.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/css/star-rating.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="nav"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-md-3" id="side"></div>
+      <div class="col-sm-8 col-md-9" id="main"></div>
+    </div>
+  </div>
+  <div id="foot"></div>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xzoom/1.0.15/xzoom.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/themes/krajee-svg/theme.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function cm(s, name, when, from, text) {
+      return '<div class="row"><div class="col-md-12">' + stars(s) + ' ' + esc(name) + '<span class="pull-right">' + when + '</span>' +
+        '<p>Từ <em>' + from + '</em></p><p>' + esc(text) + '</p><hr></div></div>';
+    }
+    $(function () {
+      var p = P[(+param("id") || 1) - 1] || P[0];
+      layout(sideCats(p.cat));
+      document.title = p.name + " - Thạch Anh Xinh";
+
+      var gallery = galleryImages(p), firstImage = gallery[0];
+      var thumbs = gallery.map(function (photo) {
+        return '<a href="' + photo.original + '"><img class="xzoom-gallery product-thumb-image" width="80" src="' + photo.thumb + '" xpreview="' + photo.preview + '" alt="' + esc(photo.alt) + '"></a>';
+      }).join("");
+      var others = P.filter(function (x) { return x.id != p.id; }).slice(0, 3).map(card).join("");
+
+      var html =
+        '<div class="thumbnail"><div class="row">' +
+          '<div class="col-sm-6"><div class="product-gallery xzoom-container"><div class="detail-badges">' +
+          (p.sale ? '<span class="product-sale-badge">-' + p.sale + '%</span>' : '') +
+          (p.label ? '<span class="product-status-badge ' + (p.label === "New" ? "new" : "best-seller") + '">' + p.label + '</span>' : '') +
+          '</div><div class="main-image"><img id="big" class="xzoom product-detail-image" src="' + firstImage.preview + '" xoriginal="' + firstImage.original + '" alt="' + esc(firstImage.alt) + '"></div><div class="xzoom-thumbs">' + thumbs + '</div></div></div>' +
+          '<div class="col-sm-6"><h4 class="pull-right">' + money(p.price) + '</h4><h4><a href="#">' + p.name + '</a></h4>' +
+          '<p>' + p.d + ' Vòng được làm từ đá thạch anh tự nhiên, mài tròn bóng, xỏ dây thun co giãn bền chắc, kèm hộp quà và thẻ bảo hành dây 6 tháng.</p>' +
+          stockHtml(p) +
+          '<form id="buy" role="form">' +
+            '<div class="number form-group"><label>Số lượng</label> <input type="number" class="input-sm" id="number" value="1" min="1"></div>' +
+            '<div class="form-group"><label>Kích thước hạt</label> <select id="hat"><option>6mm</option><option selected>8mm</option><option>10mm</option><option>12mm</option></select></div>' +
+            '<div class="form-group"><label>Size cổ tay</label> <div class="btn-group" id="sizes">' +
+              ["14", "15", "16", "17", "18"].map(function (s) { return '<button type="button" class="btn btn-default">' + s + ' cm</button>'; }).join("") + '</div></div>' +
+            '<div class="form-group"><button type="button" id="contact" class="btn btn-default">Liên hệ shop</button> <button type="submit" class="btn btn-success">Thêm vào giỏ</button></div>' +
+          '</form></div>' +
+        '</div></div>' +
+
+        '<div class="thumbnail"><div class="caption" id="comments">' +
+          '<div class="description"><p>Đá thạch anh tự nhiên được chọn lọc kỹ, hạt đều màu, không nứt. Nên tránh va đập mạnh và tiếp xúc hóa chất để vòng luôn bền đẹp.</p></div>' +
+          '<div class="ratings"><p class="pull-right">' + p.r + ' đánh giá</p><p>' + stars(p.s) + ' ' + p.s + '.0 sao</p></div>' +
+          '<div class="well"><div class="text-right"><a class="btn btn-success" id="btnReview">Viết đánh giá</a></div>' +
+            '<form id="rf" style="display:none;margin-top:10px"><div class="form-group"><input class="form-control" id="rn" placeholder="Tên của bạn" required></div>' +
+            '<div class="form-group"><textarea class="form-control" id="rt" rows="3" placeholder="Nội dung đánh giá" required></textarea></div>' +
+            '<button class="btn btn-success">Gửi đánh giá</button></form></div>' +
+          '<div id="cmts">' +
+            cm(4, "Nguyễn Minh Anh", "1 ngày trước", "Hà Nội", "Sản phẩm chất lượng tốt, hạt đều và đeo rất vừa tay. Sẽ ủng hộ shop lần nữa!") +
+            cm(4, "Trần Quốc Bảo", "2 ngày trước", "TP. Hồ Chí Minh", "Giao hàng nhanh, đóng gói cẩn thận, mua thêm một chiếc tặng bạn.") +
+            cm(4, "Lê Thu Hà", "5 ngày trước", "Đà Nẵng", "Màu đá thực tế đẹp hơn trong hình, với mức giá này thì rất đáng mua.") +
+          '</div></div></div>' +
+        '<h3>Sản phẩm khác bạn có thể thích</h3><div class="row">' + others + '</div>';
+      $("#main").html(html);
+      initRatings($("#main"));
+      $(".xzoom, .xzoom-gallery").xzoom({
+        zoomWidth: 350,
+        zoomHeight: 350,
+        position: "right",
+        Xoffset: 15,
+        tint: "#333",
+        tintOpacity: 0.3,
+        adaptive: true
+      });
+      $('[data-toggle="tooltip"]').tooltip();
+
+      $("#sizes .btn").click(function () { $(this).addClass("active").siblings().removeClass("active"); });
+      $("#contact").click(function () { toast("Shop sẽ liên hệ lại với bạn sớm nhất!"); });
+      $("#buy").submit(function (e) {
+        e.preventDefault();
+        var s = $("#sizes .active").text();
+        if (!s) return alert("Vui lòng chọn size cổ tay.");
+        add(p.id, Math.max(1, +$("#number").val() || 1), "Hạt " + $("#hat").val() + " / size " + s);
+        toast("Đã thêm vào giỏ hàng");
+      });
+      $("#btnReview").click(function () { $("#rf").slideToggle(); });
+      $("#rf").submit(function (e) {
+        e.preventDefault();
+        var comment = $(cm(5, $("#rn").val(), "Vừa xong", "Việt Nam", $("#rt").val()));
+        $("#cmts").prepend(comment);
+        initRatings(comment);
+        this.reset(); $("#rf").slideUp();
+      });
+    });
+  </script>
+</body>
+</html>

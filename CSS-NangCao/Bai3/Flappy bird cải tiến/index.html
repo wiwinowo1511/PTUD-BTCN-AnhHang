@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Flappy Bird bằng HTML, CSS và JavaScript</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/guide.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="stage">
+  <canvas id="c"></canvas>
+  <div id="ui"></div>
+  <button id="pauseBtn" title="Tạm dừng (Esc / P)" aria-label="Tạm dừng">⏸</button>
+</div>
+
+<main class="guide" aria-labelledby="guide-title">
+  <header class="guide__header">
+    <span class="guide__eyebrow">FLAPPY BIRD · PLAY GUIDE</span>
+    <h2 id="guide-title">📖 Hướng dẫn chơi game</h2>
+    <p>Nắm nhanh cách điều khiển, vật phẩm và những thử thách trong game.</p>
+  </header>
+
+  <div class="guide__grid">
+    <section class="guide-card">
+      <div class="guide-card__icon" aria-hidden="true">🎮</div>
+      <div class="guide-card__content">
+        <h3>1. Điều khiển</h3>
+        <ul>
+          <li><strong>Chế độ 1 người:</strong> Giữ <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>W</kbd> hoặc <kbd>Space</kbd> để bay lên; thả phím, chim sẽ rơi. Trên điện thoại, chạm và giữ màn hình.</li>
+          <li><strong>Chế độ 2 người:</strong> Người chơi 1 giữ <kbd>W</kbd> hoặc <kbd>Space</kbd>; người chơi 2 giữ <kbd>↑</kbd> hoặc <kbd>↓</kbd>. Trên điện thoại, chạm nửa trái hoặc nửa phải màn hình.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="guide-card">
+      <div class="guide-card__icon" aria-hidden="true">🏆</div>
+      <div class="guide-card__content">
+        <h3>2. Mục tiêu và cấp độ</h3>
+        <ul>
+          <li>Thu thập xu vàng và tránh các chướng ngại vật.</li>
+          <li><strong>Level 2:</strong> từ 5 điểm.</li>
+          <li><strong>Level 3:</strong> từ 20 điểm.</li>
+          <li><strong>Level 4:</strong> từ 40 điểm.</li>
+          <li><strong>Chiến thắng:</strong> đạt 50 điểm.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="guide-card">
+      <div class="guide-card__icon" aria-hidden="true">✨</div>
+      <div class="guide-card__content">
+        <h3>3. Vật phẩm hỗ trợ</h3>
+        <ul>
+          <li><strong>Đèn pin vàng “+”:</strong> phóng to chim trong 3 giây.</li>
+          <li><strong>Đèn pin xanh “−”:</strong> thu nhỏ chim trong 3 giây.</li>
+          <li><strong>Kẹo mút:</strong> làm chim nhấp nháy 7 màu trong 5 giây.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="guide-card">
+      <div class="guide-card__icon" aria-hidden="true">⚠️</div>
+      <div class="guide-card__content">
+        <h3>4. Chướng ngại vật</h3>
+        <ul>
+          <li>Né bom và các cột chắn; cột màu be sẽ vỡ khi va chạm.</li>
+          <li>Tránh đám mây sấm sét vì bị sét đánh trúng sẽ mất mạng.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="guide-card">
+      <div class="guide-card__icon" aria-hidden="true">❤️</div>
+      <div class="guide-card__content">
+        <h3>5. Mạng sống và hồi sinh</h3>
+        <ul>
+          <li>Mỗi người chơi có 5 mạng.</li>
+          <li>Khi bị mất mạng, chim sẽ hồi sinh sau 1 giây.</li>
+          <li>Ở chế độ 2 người, người chơi nào hết mạng trước sẽ thua.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="guide-card guide-card--challenge">
+      <div class="guide-card__icon" aria-hidden="true">🐦</div>
+      <div class="guide-card__content">
+        <h3>6. Thử thách chim hồng quyến rũ</h3>
+        <p>Trong chế độ 1 người, bạn sẽ gặp chim hồng quyến rũ. Hãy nhấn <kbd>Space</kbd> thật nhanh và liên tục để thanh kháng cự không tụt về 0. Cần bấm đều tay khoảng <strong>6–7 lần mỗi giây</strong> để vượt qua thử thách.</p>
+      </div>
+    </section>
+
+    <section class="guide-card">
+      <div class="guide-card__icon" aria-hidden="true">⏸️</div>
+      <div class="guide-card__content">
+        <h3>7. Tạm dừng và cài đặt</h3>
+        <ul>
+          <li>Nhấn <kbd>Esc</kbd> hoặc <kbd>P</kbd>, hoặc nhấn nút ⏸ ở góc phải khung game để tạm dừng.</li>
+          <li>Menu tạm dừng có các mục: Tiếp tục, Về trang chủ, Cửa hàng skin và Cài đặt âm lượng.</li>
+          <li>Game tự động tạm dừng khi bạn chuyển sang cửa sổ khác.</li>
+          <li>Game có nhạc nền và hiệu ứng âm thanh; bạn có thể chỉnh âm lượng trong Cài đặt.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="guide-card">
+      <div class="guide-card__icon" aria-hidden="true">👕</div>
+      <div class="guide-card__content">
+        <h3>8. Cửa hàng skin</h3>
+        <p>Cửa hàng có <strong>20 skin</strong> với các phụ kiện và trang phục khác nhau như mũ, râu và quần áo.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="guide__footer">
+    Chúc bạn chơi game vui vẻ và đạt được 50 điểm! 🎉
+  </footer>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

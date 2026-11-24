@@ -1,0 +1,234 @@
+/* Giao diện hướng dẫn chơi game - tách biệt với style.css */
+.guide {
+  --guide-accent: #ff7a59;
+  --guide-ink: #263449;
+  --guide-muted: #64748b;
+  --guide-card: #ffffff;
+  --guide-border: #e3eaf2;
+  width: min(920px, calc(100% - 32px));
+  margin: 28px auto 40px;
+  color: var(--fg, #2b3440);
+}
+
+.guide__header {
+  margin-bottom: 20px;
+  padding: 26px 24px;
+  border: 1px solid var(--guide-border);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff7f2, #f1f6ff);
+  text-align: center;
+}
+
+.guide__eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #d65e42;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.guide__header h2 {
+  margin: 0;
+  color: var(--guide-ink);
+  font-size: clamp(22px, 4vw, 30px);
+  line-height: 1.25;
+}
+
+.guide__header p {
+  margin: 9px 0 0;
+  color: var(--guide-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.guide__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.guide-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+  padding: 19px;
+  border: 1px solid var(--guide-border);
+  border-radius: 16px;
+  background: var(--guide-card);
+  box-shadow: 0 5px 18px rgba(35, 53, 78, .055);
+}
+
+.guide-card__icon {
+  display: grid;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 13px;
+  background: #fff0e9;
+  font-size: 21px;
+}
+
+.guide-card__content {
+  min-width: 0;
+}
+
+.guide-card h3 {
+  margin: 1px 0 9px;
+  color: var(--guide-ink);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.guide-card p,
+.guide-card li {
+  color: var(--guide-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.guide-card p {
+  margin: 0;
+}
+
+.guide-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.guide-card li + li {
+  margin-top: 5px;
+}
+
+.guide-card strong {
+  color: var(--guide-ink);
+}
+
+.guide-card kbd {
+  display: inline-block;
+  min-width: 23px;
+  margin: 0 1px;
+  padding: 2px 6px;
+  border: 1px solid #d8e0ea;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: #f8fafc;
+  color: #334155;
+  font: 700 11px/1.5 ui-monospace, SFMono-Regular, Consolas, monospace;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.guide-card--challenge {
+  border-color: #ffd8ca;
+  background: linear-gradient(135deg, #fffaf7, #ffffff);
+}
+
+.guide-card--challenge .guide-card__icon {
+  background: #ffe8df;
+}
+
+.guide__footer {
+  margin-top: 16px;
+  padding: 15px 18px;
+  border-radius: 14px;
+  background: #263c59;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .guide {
+    width: min(100% - 22px, 520px);
+    margin-top: 20px;
+  }
+
+  .guide__header {
+    padding: 21px 16px;
+    border-radius: 16px;
+  }
+
+  .guide__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .guide-card {
+    gap: 12px;
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .guide-card__icon {
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
+    font-size: 19px;
+  }
+
+  .guide-card h3 {
+    font-size: 15px;
+  }
+
+  .guide-card p,
+  .guide-card li {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .guide {
+    --guide-ink: #e5edf7;
+    --guide-muted: #c0ccda;
+    --guide-card: #202a38;
+    --guide-border: #344255;
+  }
+
+  :root:not([data-theme="light"]) .guide__header {
+    background: linear-gradient(135deg, #342b2b, #202d40);
+  }
+
+  :root:not([data-theme="light"]) .guide__header h2,
+  :root:not([data-theme="light"]) .guide-card h3,
+  :root:not([data-theme="light"]) .guide-card strong {
+    color: var(--guide-ink);
+  }
+
+  :root:not([data-theme="light"]) .guide-card kbd {
+    border-color: #526176;
+    background: #293648;
+    color: #edf3fb;
+  }
+
+  :root:not([data-theme="light"]) .guide-card--challenge {
+    background: linear-gradient(135deg, #392d2b, #202a38);
+    border-color: #70483d;
+  }
+}
+
+:root[data-theme="dark"] .guide {
+  --guide-ink: #e5edf7;
+  --guide-muted: #c0ccda;
+  --guide-card: #202a38;
+  --guide-border: #344255;
+}
+
+:root[data-theme="dark"] .guide__header {
+  background: linear-gradient(135deg, #342b2b, #202d40);
+}
+
+:root[data-theme="dark"] .guide-card kbd {
+  border-color: #526176;
+  background: #293648;
+  color: #edf3fb;
+}
+
+:root[data-theme="dark"] .guide-card--challenge {
+  background: linear-gradient(135deg, #392d2b, #202a38);
+  border-color: #70483d;
+}

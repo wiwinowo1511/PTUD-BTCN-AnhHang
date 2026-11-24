@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Flappy Bird bằng HTML, CSS và jQuery</title>
+<link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="container">
+  <div id="bird"></div>
+  <div id="pole_1" class="pole"></div>
+  <div id="pole_2" class="pole"></div>
+  <span id="level">Level 1</span>
+  <span id="score">0</span>
+  <button id="play_btn">Nhấn để chơi<small>Giữ phím ↓ (Arrow Down) để chim bay lên</small></button>
+  <button id="restart_btn">Chơi lại</button>
+  <div id="win">
+    <h2>🏆 Chiến thắng!</h2>
+    <p>Bạn đã đạt 50 điểm</p>
+    <button id="win_btn">Chơi lại</button>
+  </div>
+</div>
+<p class="hint">Giữ phím ↓ để bay lên, thả ra chim sẽ rơi. Level 2 từ 5 điểm, Level 3 từ 20 điểm, Level 4 từ 40 điểm, đạt 50 điểm là thắng.</p>
+
+<!-- jQuery tải từ CDN. Muốn chạy offline: tải jquery.min.js bỏ vào thư mục js/ rồi đổi src thành "js/jquery.min.js" -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
