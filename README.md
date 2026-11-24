@@ -45,16 +45,17 @@ JavaScript-Labs/
 - **Lab 09 – JavaScript 2: DOM and Events:** Truy xuất và thay đổi các phần tử DOM, đăng ký bộ xử lý sự kiện và tạo tương tác cho trang web.
 - **Lab 10 – JavaScript 3: jQuery:** Dùng jQuery để chọn và thao tác phần tử DOM, xử lý sự kiện, tạo hiệu ứng và thực hiện yêu cầu bất đồng bộ (AJAX).
 
-## GitHub Pages
+## GitHub Pages và các bài tập
 
-Link: [https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/JavaScript-Labs/](https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/JavaScript-Labs/)
+### Index chính thức
 
-Đường dẫn này hoạt động khi GitHub Pages đã được bật cho repository `PTUD-BTCN-AnhHang` và thư mục `JavaScript-Labs` được giữ trong nhánh/thư mục xuất bản.
+- [Index bài tập CSS nâng cao](https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/CSS-NangCao/)
+- [Trang JavaScript Labs](https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/JavaScript-Labs/)
 
-## Hướng dẫn truy cập bài thực hành
+### Các bài tập CSS nâng cao
 
-1. Mở trang GitHub Pages ở trên. Khi chạy trên máy, mở file `index.html` trong thư mục `JavaScript-Labs` bằng trình duyệt.
-2. Tìm phần **Các bài thực hành** trên trang chủ.
-3. Chọn **Walkthrough** trong thẻ Lab 08, Lab 09 hoặc Lab 10 để mở bài tương ứng.
+- [Bài 1 – Cửa hàng Thạch Anh Xinh](https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/CSS-NangCao/Bai1/ecommerce.html)
+- [Bài 3 – Flappy Bird bản gốc](https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/CSS-NangCao/Bai3/Flappy%20bird%20original/)
+- [Bài 3 – Flappy Bird cải tiến](https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/CSS-NangCao/Bai3/Flappy%20bird%20c%E1%BA%A3i%20ti%E1%BA%BFn/)
 
-Các liên kết trên trang chủ trỏ đến những trang walkthrough HTML hiện có trong từng thư mục Lab.
+Mở trang **Index bài tập CSS nâng cao** để xem danh sách và truy cập nhanh từng bài. Trang JavaScript Labs chứa các walkthrough của Lab 08, Lab 09 và Lab 10.
