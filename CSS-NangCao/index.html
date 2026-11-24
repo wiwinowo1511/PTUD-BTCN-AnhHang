@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ff">
+  <title>Bài tập cá nhân Advance Frontend</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #24213b;
+      background: #f7f6fc;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(ellipse at 12% 0%, rgba(201, 188, 255, .4), transparent 34rem),
+        radial-gradient(ellipse at 100% 20%, rgba(255, 213, 227, .48), transparent 30rem),
+        #f7f6fc;
+    }
+
+    .page {
+      width: min(1080px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 82px 0 64px;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin-bottom: 36px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: #7256c9;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .16em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+    }
+
+    .intro p {
+      margin: 16px 0 0;
+      color: #716d82;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .student-details {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 24px 0 0;
+      padding: 16px 18px;
+      border: 1px solid rgba(105, 88, 156, .12);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, .72);
+    }
+
+    .student-details dt {
+      margin-bottom: 5px;
+      color: #817b93;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .student-details dd {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      --accent: #7256c9;
+      display: flex;
+      min-height: 270px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 25px;
+      border: 1px solid rgba(105, 88, 156, .12);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, .84);
+      box-shadow: 0 14px 40px rgba(58, 45, 98, .08);
+      color: inherit;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .project-card:hover,
+    .project-card:focus-visible {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+      box-shadow: 0 20px 46px rgba(58, 45, 98, .14);
+      color: inherit;
+      text-decoration: none;
+      outline: none;
+    }
+
+    .project-card:focus-visible {
+      outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);
+      outline-offset: 3px;
+    }
+
+    .project-card--shop {
+      --accent: #7653a6;
+    }
+
+    .project-card--original {
+      --accent: #3982aa;
+    }
+
+    .project-card--enhanced {
+      --accent: #d66b86;
+    }
+
+    .card-top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 34px;
+    }
+
+    .card-number {
+      color: var(--accent);
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -.05em;
+    }
+
+    .card-label {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 10%, white);
+      color: var(--accent);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      letter-spacing: -.02em;
+    }
+
+    .project-card p {
+      margin: 0 0 24px;
+      color: #716d82;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: auto;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .card-link span {
+      font-size: 18px;
+      transition: transform 180ms ease;
+    }
+
+    .project-card:hover .card-link span {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding-top: 56px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .student-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .project-card {
+        min-height: 220px;
+      }
+
+      .card-top {
+        margin-bottom: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="intro">
+      <span class="eyebrow">CSS NÂNG CAO</span>
+      <h1>Bài tập cá nhân Advance Frontend</h1>
+      <p>Chọn một bài bên dưới để mở trang GitHub Pages tương ứng.</p>
+      <dl class="student-details">
+        <div>
+          <dt>Sinh viên</dt>
+          <dd>Nguyễn Thị Ánh Hằng</dd>
+        </div>
+        <div>
+          <dt>Học phần</dt>
+          <dd>Phát triển ứng dụng TMĐT</dd>
+        </div>
+        <div>
+          <dt>MSSV</dt>
+          <dd>31241027237</dd>
+        </div>
+      </dl>
+    </header>
+
+    <main class="projects" aria-label="Danh sách bài thực hành">
+      <a class="project-card project-card--shop" href="https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/CSS-NangCao/Bai1/ecommerce.html">
+        <span class="card-top">
+          <span class="card-number">01</span>
+          <span class="card-label">BÀI 1</span>
+        </span>
+        <h2>Cửa hàng Thạch Anh Xinh</h2>
+        <p>Trang cửa hàng với danh mục sản phẩm, chi tiết, giỏ hàng và đánh giá.</p>
+        <span class="card-link">Mở bài 1 <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="project-card project-card--original" href="https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/CSS-NangCao/Bai3/Flappy%20bird%20original/">
+        <span class="card-top">
+          <span class="card-number">03</span>
+          <span class="card-label">BÀI 3 · BẢN GỐC</span>
+        </span>
+        <h2>Flappy Bird</h2>
+        <p>Phiên bản Flappy Bird nguyên bản.</p>
+        <span class="card-link">Chơi bản gốc <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="project-card project-card--enhanced" href="https://wiwinowo1511.github.io/PTUD-BTCN-AnhHang/CSS-NangCao/Bai3/Flappy%20bird%20c%E1%BA%A3i%20ti%E1%BA%BFn/">
+        <span class="card-top">
+          <span class="card-number">03</span>
+          <span class="card-label">BÀI 3 · CẢI TIẾN</span>
+        </span>
+        <h2>Flappy Bird cải tiến</h2>
+        <p>Phiên bản mở rộng với chế độ chơi và vật phẩm mới.</p>
+        <span class="card-link">Chơi bản cải tiến <span aria-hidden="true">→</span></span>
+      </a>
+    </main>
+  </div>
+</body>
+</html>
