@@ -1,0 +1,416 @@
+{
+  "categories": [
+    {
+      "name": "Học tập",
+      "color": "#a78bfa"
+    },
+    {
+      "name": "Đồ án nhóm",
+      "color": "#f472b6"
+    },
+    {
+      "name": "Công việc",
+      "color": "#7dd3fc"
+    },
+    {
+      "name": "Sức khỏe",
+      "color": "#6ee7b7"
+    },
+    {
+      "name": "Tài chính",
+      "color": "#fcd34d"
+    },
+    {
+      "name": "Gia đình",
+      "color": "#fda4af"
+    },
+    {
+      "name": "Mua sắm",
+      "color": "#c4b5fd"
+    }
+  ],
+  "tasks": [
+    {
+      "title": "Ôn tập giữa kỳ Quản trị dự án",
+      "description": "Tổng hợp slide và đề cương chương 1-3",
+      "category": "Học tập",
+      "priority": "High",
+      "status": "Completed",
+      "startOffset": -33,
+      "dueOffset": -30,
+      "completedOffset": -31,
+      "completedTime": "09:00"
+    },
+    {
+      "title": "Nộp bài CSS Basic",
+      "description": "Hoàn thành các bài chọn và bài tự làm",
+      "category": "Học tập",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -32,
+      "dueOffset": -28,
+      "completedOffset": -29,
+      "completedTime": "10:13"
+    },
+    {
+      "title": "Họp nhóm chốt đề tài Owniverse",
+      "description": "Thống nhất ý tưởng và phân công ban đầu",
+      "category": "Đồ án nhóm",
+      "priority": "High",
+      "status": "Completed",
+      "startOffset": -30,
+      "dueOffset": -29,
+      "completedOffset": -29,
+      "completedTime": "11:26"
+    },
+    {
+      "title": "Khám sức khỏe định kỳ",
+      "description": "Đặt lịch và đi khám tổng quát",
+      "category": "Sức khỏe",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -27,
+      "dueOffset": -26,
+      "completedOffset": -26,
+      "completedTime": "12:39"
+    },
+    {
+      "title": "Đóng tiền điện nước",
+      "description": "Thanh toán hóa đơn tháng 10",
+      "category": "Tài chính",
+      "priority": "Low",
+      "status": "Completed",
+      "startOffset": -25,
+      "dueOffset": -23,
+      "completedOffset": -24,
+      "completedTime": "13:52"
+    },
+    {
+      "title": "Làm lab JavaScript 08",
+      "description": "Hoàn thành phần ngôn ngữ nền tảng",
+      "category": "Học tập",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -24,
+      "dueOffset": -20,
+      "completedOffset": -21,
+      "completedTime": "14:05"
+    },
+    {
+      "title": "Viết outline báo cáo chương 1",
+      "description": "Phác thảo mục lục và nội dung chính",
+      "category": "Đồ án nhóm",
+      "priority": "High",
+      "status": "Completed",
+      "startOffset": -22,
+      "dueOffset": -18,
+      "completedOffset": -19,
+      "completedTime": "15:18"
+    },
+    {
+      "title": "Mua quà sinh nhật bạn",
+      "description": "Chọn quà và gói quà",
+      "category": "Mua sắm",
+      "priority": "Low",
+      "status": "Completed",
+      "startOffset": -20,
+      "dueOffset": -17,
+      "completedOffset": -18,
+      "completedTime": "16:31"
+    },
+    {
+      "title": "Tập gym buổi sáng",
+      "description": "Buổi tập tay và vai 45 phút",
+      "category": "Sức khỏe",
+      "priority": "Low",
+      "status": "Completed",
+      "startOffset": -16,
+      "dueOffset": -16,
+      "completedOffset": -16,
+      "completedTime": "17:44"
+    },
+    {
+      "title": "Gọi điện về cho gia đình",
+      "description": "Hỏi thăm và báo kế hoạch về quê",
+      "category": "Gia đình",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -15,
+      "dueOffset": -15,
+      "completedOffset": -15,
+      "completedTime": "09:57"
+    },
+    {
+      "title": "Thiết kế wireframe trang chủ",
+      "description": "Vẽ bố cục desktop và mobile",
+      "category": "Đồ án nhóm",
+      "priority": "High",
+      "status": "Completed",
+      "startOffset": -14,
+      "dueOffset": -10,
+      "completedOffset": -11,
+      "completedTime": "10:10"
+    },
+    {
+      "title": "Quyết toán chi tiêu tháng 10",
+      "description": "Tổng kết thu chi và rút kinh nghiệm",
+      "category": "Tài chính",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -13,
+      "dueOffset": -10,
+      "completedOffset": -10,
+      "completedTime": "11:23"
+    },
+    {
+      "title": "Soạn mẫu email chăm sóc khách hàng",
+      "description": "Ba mẫu email cho các tình huống thường gặp",
+      "category": "Công việc",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -11,
+      "dueOffset": -8,
+      "completedOffset": -9,
+      "completedTime": "12:36"
+    },
+    {
+      "title": "Làm lab jQuery responsive",
+      "description": "Hoàn thành bài e-commerce và LMS",
+      "category": "Học tập",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -9,
+      "dueOffset": -6,
+      "completedOffset": -7,
+      "completedTime": "13:49"
+    },
+    {
+      "title": "Chạy bộ 5km",
+      "description": "Chạy quanh công viên buổi chiều",
+      "category": "Sức khỏe",
+      "priority": "Low",
+      "status": "Completed",
+      "startOffset": -6,
+      "dueOffset": -6,
+      "completedOffset": -6,
+      "completedTime": "14:02"
+    },
+    {
+      "title": "Nộp bài cá nhân chương 4",
+      "description": "Tình huống Flash Sale và bảng phân công",
+      "category": "Học tập",
+      "priority": "High",
+      "status": "Completed",
+      "startOffset": -5,
+      "dueOffset": -3,
+      "completedOffset": -4,
+      "completedTime": "15:15"
+    },
+    {
+      "title": "Dọn phòng và giặt đồ",
+      "description": "Dọn dẹp cuối tuần",
+      "category": "Gia đình",
+      "priority": "Low",
+      "status": "Completed",
+      "startOffset": -4,
+      "dueOffset": -3,
+      "completedOffset": -3,
+      "completedTime": "16:28"
+    },
+    {
+      "title": "Họp nhóm review tiến độ",
+      "description": "Rà soát việc đã làm và việc còn lại",
+      "category": "Đồ án nhóm",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -3,
+      "dueOffset": -2,
+      "completedOffset": -2,
+      "completedTime": "17:41"
+    },
+    {
+      "title": "Hoàn thiện slide thuyết trình",
+      "description": "Chỉnh nội dung và hình ảnh minh họa",
+      "category": "Học tập",
+      "priority": "High",
+      "status": "Completed",
+      "startOffset": -2,
+      "dueOffset": 0,
+      "completedOffset": 0,
+      "completedTime": "09:54"
+    },
+    {
+      "title": "Gửi báo cáo tuần cho mentor",
+      "description": "Tổng hợp công việc đã làm trong tuần",
+      "category": "Công việc",
+      "priority": "Medium",
+      "status": "Completed",
+      "startOffset": -1,
+      "dueOffset": 0,
+      "completedOffset": 0,
+      "completedTime": "10:07"
+    },
+    {
+      "title": "Viết backend API Todo App",
+      "description": "Express, SQLite và các endpoint REST",
+      "category": "Học tập",
+      "priority": "High",
+      "status": "In Progress",
+      "startOffset": -2,
+      "dueOffset": 2
+    },
+    {
+      "title": "Viết báo cáo Owniverse chương 3",
+      "description": "Phân tích yêu cầu và thiết kế hệ thống",
+      "category": "Đồ án nhóm",
+      "priority": "High",
+      "status": "In Progress",
+      "startOffset": -3,
+      "dueOffset": 3
+    },
+    {
+      "title": "Chuẩn bị bài thuyết trình Flash Sale",
+      "description": "Soạn kịch bản và demo",
+      "category": "Công việc",
+      "priority": "Medium",
+      "status": "In Progress",
+      "startOffset": -1,
+      "dueOffset": 1
+    },
+    {
+      "title": "Đọc tài liệu trích dẫn Mendeley",
+      "description": "Chuẩn hóa danh mục tài liệu tham khảo",
+      "category": "Học tập",
+      "priority": "Low",
+      "status": "In Progress",
+      "startOffset": 0,
+      "dueOffset": 4
+    },
+    {
+      "title": "Lập kế hoạch chi tiêu tháng 12",
+      "description": "Chia ngân sách theo nhóm chi tiêu",
+      "category": "Tài chính",
+      "priority": "Medium",
+      "status": "In Progress",
+      "startOffset": -1,
+      "dueOffset": 2
+    },
+    {
+      "title": "Làm giao diện Todo App",
+      "description": "Dashboard, Tasks và Statistics",
+      "category": "Học tập",
+      "priority": "High",
+      "status": "To Do",
+      "startOffset": 0,
+      "dueOffset": 1
+    },
+    {
+      "title": "Mua nguyên liệu nấu ăn",
+      "description": "Đi siêu thị cho cuối tuần",
+      "category": "Mua sắm",
+      "priority": "Low",
+      "status": "To Do",
+      "startOffset": 0,
+      "dueOffset": 0
+    },
+    {
+      "title": "Họp nhóm thống nhất chương 4",
+      "description": "Chốt cột mốc và phân công",
+      "category": "Đồ án nhóm",
+      "priority": "Medium",
+      "status": "To Do",
+      "startOffset": 0,
+      "dueOffset": 0
+    },
+    {
+      "title": "Tập yoga 30 phút",
+      "description": "Giãn cơ sau giờ học",
+      "category": "Sức khỏe",
+      "priority": "Low",
+      "status": "To Do",
+      "startOffset": 0,
+      "dueOffset": 0
+    },
+    {
+      "title": "Ôn thi cuối kỳ TMĐT",
+      "description": "Lập đề cương và làm đề mẫu",
+      "category": "Học tập",
+      "priority": "High",
+      "status": "To Do",
+      "startOffset": 3,
+      "dueOffset": 14
+    },
+    {
+      "title": "Đặt vé về quê dịp Tết",
+      "description": "So sánh giá xe và tàu",
+      "category": "Gia đình",
+      "priority": "Medium",
+      "status": "To Do",
+      "startOffset": 1,
+      "dueOffset": 5
+    },
+    {
+      "title": "Nộp học phí học kỳ mới",
+      "description": "Chuẩn bị chuyển khoản đúng hạn",
+      "category": "Tài chính",
+      "priority": "High",
+      "status": "To Do",
+      "startOffset": 5,
+      "dueOffset": 10
+    },
+    {
+      "title": "Mua giá đỡ laptop",
+      "description": "So sánh vài mẫu trên sàn TMĐT",
+      "category": "Mua sắm",
+      "priority": "Low",
+      "status": "To Do",
+      "startOffset": 2,
+      "dueOffset": 6
+    },
+    {
+      "title": "Làm slide môn Chiến lược TMĐT",
+      "description": "Chưa kịp hoàn thiện phần phân tích",
+      "category": "Học tập",
+      "priority": "High",
+      "status": "To Do",
+      "startOffset": -6,
+      "dueOffset": -2
+    },
+    {
+      "title": "Đóng tiền internet",
+      "description": "Quên thanh toán hóa đơn tháng này",
+      "category": "Tài chính",
+      "priority": "Medium",
+      "status": "To Do",
+      "startOffset": -5,
+      "dueOffset": -1
+    },
+    {
+      "title": "Viết nhật ký học tập",
+      "description": "Ghi lại kiến thức đã học trong tuần",
+      "category": "Học tập",
+      "priority": "Low",
+      "status": "In Progress",
+      "startOffset": -8,
+      "dueOffset": -3
+    },
+    {
+      "title": "Đặt lịch tiêm phòng",
+      "description": "Liên hệ phòng khám để hẹn giờ",
+      "category": "Sức khỏe",
+      "priority": "Medium",
+      "status": "To Do",
+      "startOffset": -4,
+      "dueOffset": -2
+    },
+    {
+      "title": "Viết test case cho Owniverse",
+      "description": "Kiểm thử luồng đặt hàng",
+      "category": "Đồ án nhóm",
+      "priority": "Medium",
+      "status": "In Progress",
+      "startOffset": -7,
+      "dueOffset": -1
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>Lumi - Thống kê</title></head>
+<body data-page="stats"><div class="app"><aside id="sidebar" class="sidebar"></aside>
+<main class="main">
+  <header class="hero"><div><p class="date">Hiệu suất làm việc</p><h1>Thống kê</h1></div>
+    <div class="seg" id="range"><button data-range="7">7 ngày</button><button data-range="30" class="active">30 ngày</button><button data-range="all">Toàn bộ</button></div></header>
+  <div id="stats-loading" class="sk-wrap"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+  <div id="stats-empty" class="empty" hidden><div class="art">0</div><h3>Chưa có dữ liệu trong khoảng này</h3><p>Hãy thêm vài công việc hoặc chọn khoảng thời gian dài hơn.</p></div>
+  <div id="stats-body" hidden>
+    <section class="kpis">
+      <div class="stat"><span>Tổng task</span><b id="k-total"></b></div>
+      <div class="stat done"><span>Hoàn thành</span><b id="k-done"></b></div>
+      <div class="stat doing"><span>Chưa hoàn thành</span><b id="k-pending"></b></div>
+      <div class="stat late"><span>Quá hạn</span><b id="k-overdue"></b></div>
+      <div class="stat rate"><span>Tỷ lệ hoàn thành</span><b id="k-rate"></b></div>
+    </section>
+    <section class="insights">
+      <div class="card"><span>Ngày làm việc hiệu quả nhất</span><b id="i-best"></b><small id="i-best-n"></small></div>
+      <div class="card"><span>Danh mục nhiều việc nhất</span><b id="i-cat"></b><small id="i-cat-n"></small></div>
+      <div class="card"><span>Hoàn thành trong 7 ngày qua</span><b id="i-week"></b><small>task</small></div>
+      <div class="card"><span>Tỷ lệ hoàn thành</span><b id="i-rate"></b><small>của kỳ đang xem</small></div>
+    </section>
+    <section class="charts">
+      <div class="card"><h3>Task theo trạng thái</h3><div class="cv"><canvas id="c-status"></canvas></div></div>
+      <div class="card"><h3>Hoàn thành theo ngày trong tuần</h3><div class="cv"><canvas id="c-weekday"></canvas></div></div>
+      <div class="card"><h3>Task theo mức ưu tiên</h3><div class="cv"><canvas id="c-priority"></canvas></div></div>
+      <div class="card"><h3>Phân bổ theo danh mục</h3><div class="cv"><canvas id="c-category"></canvas></div></div>
+    </section>
+  </div>
+</main></div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script src="js/app.js"></script><script src="js/statistics.js"></script></body></html>
